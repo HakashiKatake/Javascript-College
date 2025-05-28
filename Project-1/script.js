@@ -11,6 +11,7 @@ function changeColor() {
     colorCode.innerText = `Current Color: ${color}`; // Sets the text content of the color code element
 }
 
+
 btn.addEventListener('click', changeColor);
 
 console.log(Math.random()); // Generates a random number between 0 and 1
