@@ -1,49 +1,79 @@
-.counter {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffbeb;
     display: flex;
-    flex-direction: column; 
-    align-items: center;
     justify-content: center;
-    margin: auto;
-    background-color: rgb(73, 235, 151);
-    width: 400px;
-    height: 300px;
-    margin-top: 200px;
-    border-radius: 30px;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
+.counter {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
 
+.counter::before {
+    content: "Counter";
+    display: block;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
 
+#number {
+    font-size: 80px;
+    color: #4CAF50;
+    margin: 30px 0;
+}
 
-#increment {
-    width: 100px;
-    height: 50px;
-    background-color: #4CAF50;
+button {
+    width: 120px;
+    height: 45px;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 30px; 
-   
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#increment {
+    background-color: #4CAF50;
+    order: 3;
 }
 
 #decrement {
-    width: 100px;
-    height: 50px;
     background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 30px;
+    order: 1;
 }
 
 #reset {
-    width: 100px;
-    height: 50px;
     background-color: #2196F3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 30px;
+    order: 2;
+}
+
+/* Flex container for buttons */
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Create a separate container for the buttons */
+.counter div:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
