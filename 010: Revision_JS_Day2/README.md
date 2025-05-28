@@ -1,4 +1,4 @@
-JavaScript MCQs: DOM, Events, Math.random(), Variables, Functions
+## JavaScript MCQs: DOM, Events, Math.random(), Variables, Functions
 
 ---
 
@@ -274,7 +274,7 @@ JavaScript MCQs: DOM, Events, Math.random(), Variables, Functions
 
 Mixed Concepts
 
-1. What will `typeof "hello"` return?
+1. What will typeof "hello" return?
 
     * a) string
     * b) text
@@ -285,7 +285,7 @@ Mixed Concepts
 
     Reference: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 
-2. What does `console.log()` do?
+2. What does console.log() do?
 
     * a) Displays content on the webpage
     * b) Logs errors only
@@ -328,21 +328,6 @@ Mixed Concepts
     Answer: a) Not a Number
 
     Reference: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)
-
-6. Which method is used to convert a string to a number?
-
-    * a) parseInt()
-    * b) toNumber()
-    * c) convertNumber()
-    * d) parse()
-
-    Answer: a) parseInt()
-
-    Reference: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
-
----
-
-Mixed Concepts (Continued)
 
 6. Which method is used to convert a string to a number?
 
