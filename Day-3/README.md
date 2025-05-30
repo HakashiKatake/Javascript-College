@@ -28,7 +28,6 @@
 
 ![alt text](image.png)
 
-Here are the crossword answers, grouped by Across and Down. Each term is shown in inline code for clarity.
 
 ### Across
 
