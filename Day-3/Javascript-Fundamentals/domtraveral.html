@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Traversal</title>
+  <style>
+    .highlight { background: yellow; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="parent" id="parentDiv">
+      <div class="child" id="child1">Child 1 <button id="btn1">Toggle Parent Highlight</button></div>
+      <div class="child" id="child2">Child 2</div>
+      <div class="child" id="child3">Child 3</div>
+    </div>
+  </div>
+
+  <script>
+    const parentDiv = document.getElementById('parentDiv');
+    const child1 = document.getElementById('child1');
+    const btn1 = document.getElementById('btn1');
+
+   
+    console.log('Parent of child1 is:', child1.parentElement);
+
+   
+    console.log('Children of parentDiv:', parentDiv.children);
+    console.log('Child nodes of parentDiv:', parentDiv.childNodes);
+
+
+    console.log('Closest .container from child1:', child1.closest('.container'));
+
+    
+    btn1.addEventListener('click', () => {
+      parentDiv.classList.toggle('highlight');
+    });
+  </script>
+</body>
+</html>

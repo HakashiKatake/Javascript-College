@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini To-Do App</title>
+  <style>
+    ul { list-style: none; padding: 0; }
+    li { margin: 4px 0; }
+  </style>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <input type="text" id="newTask" placeholder="New task">
+  <button id="addTaskBtn">Add</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    const input = document.getElementById('newTask');
+    const addBtn = document.getElementById('addTaskBtn');
+    const list = document.getElementById('taskList');
+
+    function loadTasks() {
+      const tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+      list.innerHTML = '';
+      tasks.forEach((t, i) => {
+        const li = document.createElement('li');
+        li.textContent = t;
+        const del = document.createElement('button');
+        del.textContent = '×';
+        del.onclick = () => {
+          tasks.splice(i,1);
+          localStorage.setItem('tasks', JSON.stringify(tasks));
+          loadTasks();
+        };
+        li.append(del);
+        list.append(li);
+      });
+    }
+
+    addBtn.addEventListener('click', () => {
+      const tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+      if (input.value.trim()) {
+        tasks.push(input.value.trim());
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        input.value = '';
+        loadTasks();
+      }
+    });
+
+    loadTasks();
+  </script>
+</body>
+</html>

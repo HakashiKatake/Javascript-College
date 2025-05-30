@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Tasks</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 2em auto; }
+    .task { margin-bottom: 1em; }
+    .console { background: #f0f0f0; padding: 0.5em; border-radius: 4px; font-family: monospace; white-space: pre; }
+  </style>
+</head>
+<body>
+  <h1>JS Tasks</h1>
+  <!-- Tasks 1–15 -->
+  <div class="task">
+    <button onclick="t1()">1. Greet Me</button>
+    <div id="c1" class="console"></div>
+  </div>
+  <div class="task">
+    <button onclick="t2()">2. Greeting Function</button>
+    <div id="c2" class="console"></div>
+  </div>
+  <div class="task">
+    <button onclick="t3()">3. Even or Odd</button>
+    <div id="c3" class="console"></div>
+  </div>
+  <div class="task">
+    <button onclick="t4()">4. Countdown</button>
+    <div id="c4" class="console"></div>
+  </div>
+  <div class="task">
+    <button onclick="t5()">5. Colors</button>
+    <div id="c5" class="console"></div>
+  </div>
+  <div class="task">
+    <button onclick="alert('You clicked me!')">6. Click Alert</button>
+  </div>
+  <div class="task">
+    <button onclick="t7()">7. Change Text</button>
+    <p id="orig">Original Text</p>
+  </div>
+  <div class="task">
+    <button onclick="t8()">8. Random Number</button>
+    <div id="c8" class="console"></div>
+  </div>
+  <div class="task">
+    <button onclick="t9()">9. Add Function</button>
+    <div id="c9" class="console"></div>
+  </div>
+  <div class="task">
+    <button onclick="t10()">10. Login Status</button>
+    <div id="c10" class="console"></div>
+  </div>
+  <div class="task">
+    <button onclick="t11()">11. String Length</button>
+    <div id="c11" class="console"></div>
+  </div>
+  <div class="task">
+    <button onclick="t12()">12. Add Fruit</button>
+    <div id="c12" class="console"></div>
+  </div>
+  <div class="task">
+    <button onclick="t13()">13. Break Loop</button>
+    <div id="c13" class="console"></div>
+  </div>
+  <div class="task">
+    <button onclick="t14()">14. Typeof</button>
+    <div id="c14" class="console"></div>
+  </div>
+  <div class="task">
+    <button onclick="t15()">15. Make Red</button>
+    <p id="ctext">This text will turn red</p>
+  </div>
+
+  <script>
+    function log(id, msg) { document.getElementById('c'+id).textContent = msg; }
+    function t1() { log(1, 'I am learning JavaScript!'); }
+    function t2() { log(2, 'Hello, Alice!'); }
+    function t3() { log(3, 7 % 2 === 0 ? 'Even' : 'Odd'); }
+    function t4() { log(4, [5,4,3,2,1,'Boom!'].join('\n')); }
+    function t5() { log(5, ['Red','Green','Blue'].join('\n')); }
+    function t7() { document.getElementById('orig').textContent = 'Text Changed!'; }
+    function t8() { log(8, Math.floor(Math.random()*100)); }
+    function t9() { log(9, (a=>a(3,5))((x,y)=>x+y)); }
+    function t10() { log(10, true ? 'Welcome back!' : ''); }
+    function t11() { log(11, 'Hello'.length); }
+    function t12() { log(12, ['Apple','Banana','Orange'].join(', ')); }
+    function t13() { log(13, Array.from({length:10},(_,i)=>i).slice(0,5).join('\n')); }
+    function t14() { log(14, typeof 42); }
+    function t15() { document.getElementById('ctext').style.color = 'red'; }
+  </script>
+</body>
+</html>

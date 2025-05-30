@@ -1,0 +1,40 @@
+<!-- date-clock.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Date & Clock</title>
+</head>
+<body>
+  <div>Current time: <span id="clock"></span></div>
+  <button id="stopClockBtn">Stop Clock</button>
+
+  <script>
+    const clockSpan = document.getElementById('clock');
+    const stopClockBtn = document.getElementById('stopClockBtn');
+
+
+    console.log('Now is', new Date());
+
+    let clockInterval = setInterval(() => {
+      const now = new Date();
+      clockSpan.textContent = now.toLocaleTimeString();
+    }, 1000);
+
+    stopClockBtn.addEventListener('click', () => clearInterval(clockInterval));
+
+
+    const d1 = new Date('2025-01-01');
+    const d2 = new Date('2024-12-31');
+    console.log('Earlier date is', d1 < d2 ? d1 : d2);
+
+   
+    let counter = 0;
+    const upTimer = setInterval(() => {
+      console.log(counter);
+      counter++;
+      if (counter > 10) clearInterval(upTimer);
+    }, 1000);
+  </script>
+</body>
+</html>
